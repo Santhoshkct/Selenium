@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Suite" parallel="tests">
+	<packages>
+		<package name='testcases.Leads'></package>
+	</packages>
+	<test name="Test" parallel="classes">
+		<classes>
+			<class name="testcases.accounts.TC003_DeleteContactdetails" />
+			<class name="testcases.leads.TC004_DuplicateLead" />
+			<class name="testcases.leads.TC005_MergeLead" />
+			<class name="testcases.accounts.TC004_DeactiveAccount" />
+			<class name="testcases.leads.TC003_DeleteLeads" />
+			<class name="testcases.leads.TC002_EditLeads" />
+			<class name="testcases.accounts.TC002_EditandSave" />
+			<class name="testcases.accounts.TC001_CreateAccount" />
+			<class name="testcases.leads.TC001_CreateLead" />
+			<class name="testcases.accounts.TC005_MergeAccounts" />
+		</classes>
+	</test> <!-- Test -->
+	<test name = "Test2">
+		<classes>
+			<class name="testcases.leads.TC008_MergeAcct_P001" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

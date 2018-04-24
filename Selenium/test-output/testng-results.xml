@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="679" started-at="2018-04-21T06:10:01Z" finished-at="2018-04-21T06:10:02Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="679" started-at="2018-04-21T06:10:01Z" finished-at="2018-04-21T06:10:02Z">
+      <class name="testcases.leads.TC001_CreateLead">
+        <test-method status="FAIL" signature="loginFunctionLeaftaps(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginFunctionLeaftaps" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionLeaftaps -->
+        <test-method status="SKIP" signature="closeBrowser1()[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="closeBrowser1" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser1 -->
+        <test-method status="SKIP" signature="loginLeaftaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginLeaftaps" duration-ms="0" started-at="2018-04-21T06:10:02Z" data-provider="userdetails" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLeaftaps -->
+        <test-method status="SKIP" signature="loginFunctionLeaftaps(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginFunctionLeaftaps" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionLeaftaps -->
+        <test-method status="SKIP" signature="loginFunctionLeaftaps(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginFunctionLeaftaps" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionLeaftaps -->
+        <test-method status="SKIP" signature="closeBrowser1()[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="closeBrowser1" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser1 -->
+        <test-method status="SKIP" signature="loginLeaftaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginLeaftaps" duration-ms="0" started-at="2018-04-21T06:10:02Z" data-provider="userdetails" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLeaftaps -->
+        <test-method status="SKIP" signature="loginFunctionLeaftaps(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginFunctionLeaftaps" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionLeaftaps -->
+        <test-method status="SKIP" signature="closeBrowser1()[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="closeBrowser1" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser1 -->
+        <test-method status="SKIP" signature="loginLeaftaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginLeaftaps" duration-ms="0" started-at="2018-04-21T06:10:02Z" data-provider="userdetails" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLeaftaps -->
+        <test-method status="SKIP" signature="loginLeaftaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="loginLeaftaps" duration-ms="0" started-at="2018-04-21T06:10:02Z" data-provider="userdetails" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLeaftaps -->
+        <test-method status="SKIP" signature="closeBrowser1()[pri:0, instance:testcases.leads.TC001_CreateLead@c03f1f]" name="closeBrowser1" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser1 -->
+      </class> <!-- testcases.leads.TC001_CreateLead -->
+      <class name="testcases.leads.TC002_EditLeads">
+        <test-method status="SKIP" signature="closeBrowser1()[pri:0, instance:testcases.leads.TC002_EditLeads@c0a365]" name="closeBrowser1" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser1 -->
+        <test-method status="SKIP" signature="editLeads()[pri:0, instance:testcases.leads.TC002_EditLeads@c0a365]" name="editLeads" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'url' is required by BeforeMethod on method loginFunctionLeaftaps but has not been marked @Optional or defined
+in F:\SelTraining\Selenium\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLeads -->
+        <test-method status="SKIP" signature="loginFunctionLeaftaps(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.leads.TC002_EditLeads@c0a365]" name="loginFunctionLeaftaps" is-config="true" duration-ms="0" started-at="2018-04-21T06:10:02Z" finished-at="2018-04-21T06:10:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionLeaftaps -->
+      </class> <!-- testcases.leads.TC002_EditLeads -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
