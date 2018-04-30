@@ -3,11 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="grid.CrystalCruises">
+      <class name="MyntraTestCases.MyntraTestCase">
         <methods>
-          <include name="crystalCruises"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="MyntraTestCase_001"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="setData"/>
         </methods>
-      </class> <!-- grid.CrystalCruises -->
+      </class> <!-- MyntraTestCases.MyntraTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

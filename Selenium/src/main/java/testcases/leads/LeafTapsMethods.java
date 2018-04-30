@@ -7,7 +7,6 @@ import org.testng.annotations.Parameters;
 import wdMethods.SeMethods;
 
 public class LeafTapsMethods extends SeMethods{
-
 	
 	@Parameters({"url","username","pwd"})
 	//@BeforeMethod(groups= {"All"})

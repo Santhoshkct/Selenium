@@ -197,6 +197,3 @@ public interface WdMethods {
 		public void closeAllBrowsers();
 
 }
-
-
-
