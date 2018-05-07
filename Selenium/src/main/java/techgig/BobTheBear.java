@@ -1,7 +1,8 @@
 package techgig;
 
+
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -57,13 +58,40 @@ public class BobTheBear {
 				}
 			}
 
+			int max = 0,key=0,secondmax=0;
+			List<Integer> maxlist = new LinkedList<Integer>();
+
 			for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+			{
 				System.out.println(c.getKey() + "-->" + c.getValue().FishCountonTime + "-->" + c.getValue().li);
-			
-			
+				if(c.getValue().FishCountonTime > max)
+				{
+					max = c.getValue().FishCountonTime;
+					maxlist = c.getValue().li;
+					key= c.getKey();
+				}	
+			}
+			fishcatch.remove(key);
+			System.out.println("******************************************************************");			
+			for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+			{
+				System.out.println(c.getKey() + "-->" + c.getValue().FishCountonTime + "-->" + c.getValue().li);
+				if(c.getValue().FishCountonTime > secondmax && Compare(c.getValue().li,maxlist))
+					secondmax = c.getValue().FishCountonTime;
+			}
+
+			System.out.println(max+secondmax);
+
 		}
 	}
 
+	private static boolean Compare(List<Integer> li2, List<Integer> maxlist) {
+
+		li2.retainAll(maxlist);
+		if(li2.isEmpty())
+			return true;
+		else
+			return false;
+	}
+
 }
-
-
