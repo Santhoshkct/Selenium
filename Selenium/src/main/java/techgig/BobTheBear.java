@@ -2,12 +2,13 @@ package techgig;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class BobTheBear {
 
@@ -58,40 +59,34 @@ public class BobTheBear {
 				}
 			}
 
-			int max = 0,key=0,secondmax=0;
-			List<Integer> maxlist = new LinkedList<Integer>();
+			Set<Integer> possiblities = new TreeSet<Integer>();
+			List<Integer> firstlist = new ArrayList<Integer>();
 
-			for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+			int i = 1;
+			while(!fishcatch.isEmpty())
 			{
-				System.out.println(c.getKey() + "-->" + c.getValue().FishCountonTime + "-->" + c.getValue().li);
-				if(c.getValue().FishCountonTime > max)
-				{
-					max = c.getValue().FishCountonTime;
-					maxlist = c.getValue().li;
-					key= c.getKey();
-				}	
-			}
-			fishcatch.remove(key);
-			System.out.println("******************************************************************");			
-			for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
-			{
-				System.out.println(c.getKey() + "-->" + c.getValue().FishCountonTime + "-->" + c.getValue().li);
-				if(c.getValue().FishCountonTime > secondmax && Compare(c.getValue().li,maxlist))
-					secondmax = c.getValue().FishCountonTime;
+				for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+					if(c.getKey() == i)
+						firstlist = c.getValue().li;
+					else if(compare(c.getValue().li,firstlist))
+						possiblities.add(c.getValue().li.size() + firstlist.size());
+
+				fishcatch.remove(i);
+				i++;
 			}
 
-			System.out.println(max+secondmax);
+			System.out.println(((TreeSet<Integer>) possiblities).last());
 
 		}
 	}
 
-	private static boolean Compare(List<Integer> li2, List<Integer> maxlist) {
+	public static boolean compare(List<Integer> comp, List<Integer> first) {
 
-		li2.retainAll(maxlist);
-		if(li2.isEmpty())
-			return true;
-		else
-			return false;
+		for(int i=0;i<first.size();i++)
+			for(int j=0;j<comp.size();j++)
+				if(first.get(i) == comp.get(j))
+					return false;
+
+		return true;
 	}
-
 }
