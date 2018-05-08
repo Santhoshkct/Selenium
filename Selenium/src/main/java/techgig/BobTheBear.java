@@ -1,11 +1,14 @@
 package techgig;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class BobTheBear {
 
@@ -56,13 +59,34 @@ public class BobTheBear {
 				}
 			}
 
-			for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
-				System.out.println(c.getKey() + "-->" + c.getValue().FishCountonTime + "-->" + c.getValue().li);
-			
-			
+			Set<Integer> possiblities = new TreeSet<Integer>();
+			List<Integer> firstlist = new ArrayList<Integer>();
+
+			int i = 1;
+			while(!fishcatch.isEmpty())
+			{
+				for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+					if(c.getKey() == i)
+						firstlist = c.getValue().li;
+					else if(compare(c.getValue().li,firstlist))
+						possiblities.add(c.getValue().li.size() + firstlist.size());
+
+				fishcatch.remove(i);
+				i++;
+			}
+
+			System.out.println(((TreeSet<Integer>) possiblities).last());
+
 		}
 	}
 
+	public static boolean compare(List<Integer> comp, List<Integer> first) {
+
+		for(int i=0;i<first.size();i++)
+			for(int j=0;j<comp.size();j++)
+				if(first.get(i) == comp.get(j))
+					return false;
+
+		return true;
+	}
 }
-
-
