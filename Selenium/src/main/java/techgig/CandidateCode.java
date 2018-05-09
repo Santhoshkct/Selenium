@@ -10,12 +10,12 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class BobTheBear {
+public class CandidateCode {
 
 	int FishCountonTime = 0;
 	List<Integer> li = new ArrayList<Integer>();
 
-	BobTheBear(int count,int salmon)
+	CandidateCode(int count,int salmon)
 	{
 		this.FishCountonTime = count;
 		li.add(salmon);
@@ -25,11 +25,11 @@ public class BobTheBear {
 
 		Scanner scan = new Scanner(System.in);
 		int salmonCount = scan.nextInt();
-		int[] len = new int[salmonCount];
+		long[] len = new long[salmonCount];
 		for(int i=0;i<salmonCount;i++) {
 			len[i] = scan.nextInt();
 		}
-		int[] time = new int[salmonCount];
+		long[] time = new long[salmonCount];
 		for(int i=0;i<salmonCount;i++) {
 			time[i] = scan.nextInt();
 		}
@@ -39,33 +39,33 @@ public class BobTheBear {
 			System.out.println(salmonCount);
 		else 
 		{
-			Map<Integer,BobTheBear> fishcatch = new TreeMap<Integer,BobTheBear>();
+			Map<Long,CandidateCode> fishcatch = new TreeMap<Long,CandidateCode>();
 
-			int[] arr = new int[2]; 
+			long[] arr = new long[2]; 
 			for(int i=0;i<salmonCount;i++)
 			{
 				arr[0] = time[i];
 				arr[1] = time[i] + len[i];
-				for(int j=arr[0];j<=arr[1];j++)
+				for(long j=arr[0];j<=arr[1];j++)
 				{
 					if(fishcatch.containsKey(j))
 					{
-						BobTheBear exist = fishcatch.get(j);
+						CandidateCode exist = fishcatch.get(j);
 						exist.FishCountonTime = exist.FishCountonTime + 1;
 						exist.li.add(i);
 					}
 					else
-						fishcatch.put(j,new BobTheBear(1,i));		
+						fishcatch.put(j,new CandidateCode(1,i));		
 				}
 			}
 
 			Set<Integer> possiblities = new TreeSet<Integer>();
 			List<Integer> firstlist = new ArrayList<Integer>();
 
-			int i = 1;
+			long i = 1;
 			while(!fishcatch.isEmpty())
 			{
-				for (Entry<Integer, BobTheBear> c : fishcatch.entrySet()) 
+				for (Entry<Long, CandidateCode> c : fishcatch.entrySet()) 
 					if(c.getKey() == i)
 						firstlist = c.getValue().li;
 					else if(compare(c.getValue().li,firstlist))
