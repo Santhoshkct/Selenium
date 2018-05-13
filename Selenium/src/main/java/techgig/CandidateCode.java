@@ -12,14 +12,14 @@ import java.util.TreeSet;
 
 public class CandidateCode {
 
-	int FishCountonTime = 0;
-	List<Integer> li = new ArrayList<Integer>();
+	private static boolean comparesort(List<Integer> comp, List<Integer> first) {
+		for(int i=0;i<first.size();i++)
+			for(int j=0;j<comp.size();j++)
+				if(first.get(i) == comp.get(j))
+					return false;
 
-	CandidateCode(int count,int salmon)
-	{
-		this.FishCountonTime = count;
-		li.add(salmon);
-	}
+		return true;
+	}	
 
 	public static void main(String[] args) {
 
@@ -27,11 +27,11 @@ public class CandidateCode {
 		int salmonCount = scan.nextInt();
 		long[] len = new long[salmonCount];
 		for(int i=0;i<salmonCount;i++) {
-			len[i] = scan.nextInt();
+			len[i] = scan.nextLong();
 		}
 		long[] time = new long[salmonCount];
 		for(int i=0;i<salmonCount;i++) {
-			time[i] = scan.nextInt();
+			time[i] = scan.nextLong();
 		}
 		scan.close();
 
@@ -39,54 +39,46 @@ public class CandidateCode {
 			System.out.println(salmonCount);
 		else 
 		{
-			Map<Long,CandidateCode> fishcatch = new TreeMap<Long,CandidateCode>();
+			Map<Long,List<Integer>> fish = new TreeMap<Long,List<Integer>>();
 
-			long[] arr = new long[2]; 
-			for(int i=0;i<salmonCount;i++)
+			for(int i=0;i<salmonCount-1;i++)
 			{
-				arr[0] = time[i];
-				arr[1] = time[i] + len[i];
-				for(long j=arr[0];j<=arr[1];j++)
+				List<Integer> li = new ArrayList<Integer>();
+				List<Integer> liLen = new ArrayList<Integer>();
+				li.add(i);
+				liLen.add(i);
+				for(int j=i+1;j<salmonCount;j++)
 				{
-					if(fishcatch.containsKey(j))
-					{
-						CandidateCode exist = fishcatch.get(j);
-						exist.FishCountonTime = exist.FishCountonTime + 1;
-						exist.li.add(i);
-					}
-					else
-						fishcatch.put(j,new CandidateCode(1,i));		
+					if(time[i] >= time[j] && time[i] <= (time[j] + len[j]))
+						li.add(j);
+					if((time[i] + len[i]) >= time[j] && (time[i] + len[i]) <= (time[j] + len[j]))
+						liLen.add(j);
 				}
+				if(!fish.containsKey(time[i]))	
+					fish.put(time[i],li);
+				if(!fish.containsKey(time[i] + len[i]))
+					fish.put((time[i] + len[i]), liLen);
+			}
+			List<List<Integer>> store = new ArrayList<List<Integer>>();
+
+			for ( Entry<Long, List<Integer>> c : fish.entrySet()) {
+				store.add(c.getValue());
 			}
 
 			Set<Integer> possiblities = new TreeSet<Integer>();
-			List<Integer> firstlist = new ArrayList<Integer>();
 
-			long i = 1;
-			while(!fishcatch.isEmpty())
+			int maxi = 0;
+			for(int i=0;i<store.size()-1;i++)
 			{
-				for (Entry<Long, CandidateCode> c : fishcatch.entrySet()) 
-					if(c.getKey() == i)
-						firstlist = c.getValue().li;
-					else if(compare(c.getValue().li,firstlist))
-						possiblities.add(c.getValue().li.size() + firstlist.size());
-
-				fishcatch.remove(i);
-				i++;
+				if(store.get(i).size() > maxi)
+					maxi = store.get(i).size();
+				for(int j=i+1;j<store.size();j++)
+					if(comparesort(store.get(i),store.get(j)))
+						possiblities.add(store.get(i).size() + store.get(j).size());
 			}
-
+			possiblities.add(maxi);
 			System.out.println(((TreeSet<Integer>) possiblities).last());
-
 		}
-	}
 
-	public static boolean compare(List<Integer> comp, List<Integer> first) {
-
-		for(int i=0;i<first.size();i++)
-			for(int j=0;j<comp.size();j++)
-				if(first.get(i) == comp.get(j))
-					return false;
-
-		return true;
-	}
+	}	
 }
